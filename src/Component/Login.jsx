@@ -65,7 +65,7 @@ function Login() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-700 via-purple-500 to-purple-700 flex justify-center items-center">
       {/* Container */}
-      <div className="max-w-5xl h-128 w-full bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+      <div className="max-w-5xl h-128 w-full bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col md:flex-row max-md:rounded-none ">
         {/* Left Section */}
         <div className="bg-white shadow-lg rounded-lg p-8 md:p-12 max-w-3xl mx-auto">
           <div className="flex justify-center">
@@ -103,6 +103,7 @@ function Login() {
             {/* Password */}
             <div className="relative">
               <label className="block text-gray-600 mb-2 font-medium">Password</label>
+              <div className='flex '>
               <input
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -117,14 +118,16 @@ function Login() {
                   e.preventDefault();
                   setShowPassword(!showPassword);
                 }}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                className="absolute pt-8 right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
               >
                 {showPassword ? (
-                  <i className="fas fa-eye-slash"></i>
-                ) : (
                   <i className="fas fa-eye"></i>
+                ) : (
+                  <i className="fas fa-eye-slash"></i>
                 )}
               </button>
+              </div>
+              
             </div>
 
             {/* Error Message */}
