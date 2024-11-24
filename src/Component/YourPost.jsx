@@ -48,7 +48,7 @@ function SelfPost() {
   };
 
   return (
-    <div className="h-screen w-screen flex">
+    <div className="h-screen w-screen">
       {/* Section for Self Posts */}
       <div className=" bg-white border-2 ">
       {documents.map((doc) => (

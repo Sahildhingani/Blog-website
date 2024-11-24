@@ -2,11 +2,23 @@ import React, { useEffect, useState } from "react";
 import AuthService from "../Appwrite/Auth"; // Assuming this is your Appwrite service
 import PreviewCard from './previewcaed';
 import Env_variables from "../../env_variables/Env_variables";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Home() {
   const [documents, setDocuments] = useState([]);
   const [imageMap, setImageMap] = useState({}); // To store image data for each document
-
+  const navigate = useNavigate();
+  useEffect(() => {
+    const checkSession = async () => {
+      const active = await AuthService.ActiveSession();
+      if (!active) {
+        navigate("/login"); // Redirect if there's no active session
+      }
+    };
+  
+    checkSession();
+  }, [navigate]);
+  
   // Fetch the list of documents
   useEffect(() => {
     const fetchDocuments = async () => {
