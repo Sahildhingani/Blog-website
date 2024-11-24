@@ -1,0 +1,24 @@
+{
+    "routes":[
+        {
+          "src": "/home",
+          "dest": "/"
+        },
+        {
+          "src":"/about",
+          "dest":"/"
+        },
+        {
+          "src":"/selfposts",
+          "dest":"/"
+        },
+        {
+          "src":"/createpost",
+          "dest":"/"
+        },
+        {
+          "src":"/page",
+          "dest":"/"
+        }
+      ]
+}
