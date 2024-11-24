@@ -1,24 +1,37 @@
 {
-    "routes":[
+    "routes": [
+      [
+        {
+          "src": "/login",
+          "dest": "/"
+        },
+        {
+          "src": "/signup",
+          "dest": "/"
+        }
+      ],
+      [
         {
           "src": "/home",
           "dest": "/"
         },
         {
-          "src":"/about",
-          "dest":"/"
+          "src": "/about",
+          "dest": "/"
         },
         {
-          "src":"/selfposts",
-          "dest":"/"
+          "src": "/selfposts",
+          "dest": "/"
         },
         {
-          "src":"/createpost",
-          "dest":"/"
+          "src": "/createpost",
+          "dest": "/"
         },
         {
-          "src":"/page",
-          "dest":"/"
+          "src": "/page",
+          "dest": "/"
         }
       ]
-}
+    ]
+  }
+  
