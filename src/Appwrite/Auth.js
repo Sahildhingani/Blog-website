@@ -169,6 +169,20 @@ class Auth {
       console.log('delete data erroe',error);
     }
   }
+  async DeletUserImage(id){
+    try {
+      const resp=this.storage.deleteFile(
+        Env_variables.Bucketid,
+        id
+      )
+      if(resp){
+        console.log("image deleted ",resp);
+        return resp;
+      }
+    } catch (error) {
+      console.log("image deletion error",error)
+    }
+  }
 }  
 
 // Export the instance

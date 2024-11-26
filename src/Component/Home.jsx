@@ -59,11 +59,12 @@ function Home() {
     <div className="h-screen w-screen bg-white">
       {documents.map((doc) => (
         <PreviewCard
+        userId={doc.userId}
         content={doc.content}
-        slug={doc.slug}
-          key={doc.$id}
-          title={doc.title} // Assuming the title is stored as `title` in the document
-          image={`https://cloud.appwrite.io/v1/storage/buckets/${Env_variables.Bucketid}/files/${imageMap[doc.$id]}/view?project=${Env_variables.ProjectId}&project=${Env_variables.ProjectId}&mode=admin`} // Fetch the associated image from the map
+        imageId={doc.imageId}
+        key={doc.$id}
+        title={doc.title} // Assuming the title is stored as `title` in the document
+        image={`https://cloud.appwrite.io/v1/storage/buckets/${Env_variables.Bucketid}/files/${imageMap[doc.$id]}/view?project=${Env_variables.ProjectId}&project=${Env_variables.ProjectId}&mode=admin`} // Fetch the associated image from the map
         />
       ))}
     </div>
