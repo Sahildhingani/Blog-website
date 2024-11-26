@@ -9,12 +9,6 @@ function Pageview() {
   const [isDeleting, setIsDeleting] = useState(false);
   const currentUserId = localStorage.getItem("userid"); // Get userId from localStorage
 
-  useEffect(() => {
-    console.log("Lock:", lock);
-    console.log("Title:", title);
-    console.log("imageid",imageid);
-  }, [lock, title]);
-
   const handleDelete = async () => {
     setIsDeleting(true);
     try {

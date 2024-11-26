@@ -71,7 +71,7 @@ class Auth {
           content,
           imageId}
       );
-      console.log("Document created successfully:", document);
+      console.log("Document created successfully:");
       return { success: true, data: document };
     } catch (error) {
       console.error("Error creating document:", error);
@@ -86,7 +86,7 @@ class Auth {
         Env_variables.Databaseid,
         Env_variables.Collectionid
       );
-      console.log("Documents retrieved successfully:", documents);
+      console.log("Documents retrieved successfully:");
       return { success: true, data: documents };
     } catch (error) {
       console.error("Error retrieving data:", error);
@@ -103,7 +103,7 @@ class Auth {
         ID.unique(),
         file
       );
-      console.log("File uploaded successfully:", uploadedFile);
+      console.log("File uploaded successfully:");
       localStorage.setItem('imageid',uploadedFile.$id)
       return { success: true, data: uploadedFile };
     } catch (error) {
@@ -133,7 +133,6 @@ class Auth {
         fileid
       )
       if(user){
-        console.log(user);
         return user;
       }
     } catch (error) {
@@ -162,7 +161,7 @@ class Auth {
         id
       )
       if(response){
-        console.log('delete successful',response);
+        console.log('delete successful');
         return response;
       }
     } catch (error) {
@@ -176,7 +175,7 @@ class Auth {
         id
       )
       if(resp){
-        console.log("image deleted ",resp);
+        console.log("image deleted ");
         return resp;
       }
     } catch (error) {

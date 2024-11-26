@@ -35,7 +35,6 @@ function Home() {
 
   // Fetch images for each document
   useEffect(() => {
-    console.log(documents);
     const fetchImages = async () => {
       const images = {};
       for (const doc of documents) {
@@ -47,7 +46,6 @@ function Home() {
         }
       }
       setImageMap(images); // Update the imageMap state
-      console.log(images);
     };
 
     if (documents.length > 0) {

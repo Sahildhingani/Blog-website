@@ -24,9 +24,6 @@ function SelfPost() {
 
     fetchDocuments();
   }, []);
-  useEffect(()=>{
-    console.log(documents);
-  })
   // Map content to document IDs
   useEffect(() => {
     const newContent = documents.reduce((acc, doc) => {
