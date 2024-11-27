@@ -3,6 +3,7 @@ import AuthService from "../Appwrite/Auth"; // Assuming this is your Appwrite se
 import PreviewCard from './previewcaed';
 import Env_variables from "../../env_variables/Env_variables";
 import { Navigate, useNavigate } from "react-router-dom";
+import { ID } from "appwrite";
 
 function Home() {
   const [documents, setDocuments] = useState([]);
@@ -59,8 +60,9 @@ function Home() {
         <PreviewCard
         userId={doc.userId}
         content={doc.content}
-        imageId={doc.imageId}
-        key={doc.$id}
+        imageid={doc.imageId}
+        lock={doc.$id}
+        key={ID.unique()}
         title={doc.title} // Assuming the title is stored as `title` in the document
         image={`https://cloud.appwrite.io/v1/storage/buckets/${Env_variables.Bucketid}/files/${imageMap[doc.$id]}/view?project=${Env_variables.ProjectId}&project=${Env_variables.ProjectId}&mode=admin`} // Fetch the associated image from the map
         />
