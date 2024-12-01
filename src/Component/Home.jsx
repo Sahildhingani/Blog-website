@@ -59,7 +59,7 @@ function Home() {
         <PreviewCard
           userId={doc.userId}
           content={doc.content}
-          imageid={imageMap[doc.$id]}
+          imageid={doc.$id}
           lock={doc.$id}
           key={doc.$id} // Using a stable unique identifier
           title={doc.title}

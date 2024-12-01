@@ -23,7 +23,7 @@ function Header() {
                 {/* Logo and Title */}
                 <div className="flex items-center">
                     <img
-                        src={Logo}
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs389E-i5cvCSJJarilwbtfA5eEqr2Ig9RBA&s"
                         alt="Logo"
                         className="h-16 w-16 rounded-full mr-4"
                     />
