@@ -64,7 +64,7 @@ function SelfPost() {
 
   return (
     <div className="h-screen w-screen flex flex-wrap">
-      <div className="bg-white border-2">
+      <div className=" flex flex-row  items-start">
         {documents.map((doc) => (
           <PreviewCard
           userId={doc.userId}
@@ -78,7 +78,7 @@ function SelfPost() {
           />
         ))}
       </div>
-      <div className="m-2 w-80 h-80 border-2 border-gray-300 rounded-lg flex  justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+      <div className="m-2 w-80 h-80 border-2 rounded-lg flex  justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
         <button
           onClick={onClickHandler}
           className="flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300"
