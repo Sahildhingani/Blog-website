@@ -12,12 +12,6 @@ function PreviewCard({content,imageid,lock,title,image,userId}) {
         state: { title, image,content,imageid,lock,userId},
       });
     };
-    // useEffect(()=>{
-    //   console.log(lock);
-    //   console.log(userId)
-    // })
-  
-
   return (
     <>
       <button
