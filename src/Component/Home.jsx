@@ -54,7 +54,7 @@ function Home() {
   useEffect(()=>{console.log(imageMap);})
 
   return (
-    <div className="h-screen w-screen bg-white max-md:flex flex-col items-center">
+    <div className="h-screen w-screen bg-white max-md:flex flex-col items-center ml-10">
       {documents.map((doc) => (
         <PreviewCard
           userId={doc.userId}

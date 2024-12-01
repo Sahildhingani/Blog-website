@@ -7,8 +7,11 @@ import Header from './Component/Header';
 function Layout() {
   return (
     <>
+    <div className='overflow-hidden'>
     <Header/>
     <Outlet/>
+    </div>
+   
     {/* <Footer/> */}
     </>
   );
