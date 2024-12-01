@@ -55,7 +55,7 @@ function Home() {
   }, [documents]);
 
   return (
-    <div className="h-screen w-screen bg-white">
+    <div className="h-screen w-screen bg-white max-md:flex flex-col items-center ">
       {documents.map((doc) => (
         <PreviewCard
         userId={doc.userId}

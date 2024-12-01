@@ -22,10 +22,10 @@ function PreviewCard({content,imageid,lock,title,image,userId}) {
     <>
       <button
         onClick={onclickhandler}
-        className="m-2 transition transform hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-lg shadow-black"
+        className="m-2 transition transform hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400 focus:outline-none shadow-md shadow-black"
         key={ID.unique()} // Rename the key prop if not in a list
       >
-        <div className="h-80 w-80 border-2 border-gray-600 flex flex-col items-center justify-center">
+        <div className="h-80 w-80 border-2 rounded-lg flex flex-col items-center justify-center">
           <img className="h-72 w-72" src={image} alt={title} />
           <h1 className="font-bold text-xl">{title}</h1>
         </div>
