@@ -63,7 +63,7 @@ function SelfPost() {
   };
 
   return (
-    <div className="h-screen w-screen flex flex-wrap">
+    <div className="h-screen w-screen flex flex-wrap ml-12">
       <div className=" flex flex-row  items-start">
         {documents.map((doc) => (
           <PreviewCard

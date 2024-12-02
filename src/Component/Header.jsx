@@ -18,7 +18,7 @@ function Header() {
     }
 
     return (
-        <header className="w-full bg-purple-700 text-white shadow-lg">
+        <header className="w-full bg-purple-700 text-white shadow-lg mb-2">
             <div className="container mx-auto flex justify-between items-center h-20 px-4 md:px-8">
                 {/* Logo and Title */}
                 <div className="flex items-center">
